@@ -1,0 +1,16 @@
+{
+  "name": "index",
+  "version": "1.0.0",
+  "description": "Proyecto Personal",
+  "main": "(modulo1.js)",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Modulos",
+    "JavaScript"
+  ],
+  "author": "Andres Terraza <andresterraza.at@gmail.com>",
+  "license": "MIT",
+  "type": "module"
+}
