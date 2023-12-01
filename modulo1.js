@@ -24,7 +24,7 @@ ingresoNombreID.addEventListener("click", function () {
 
   function siNoIngresoNombre() {
     let inputLleno = input
-    console.log(inputLleno);
+    console.log(inputLleno)
 
     let inputVacio = (document.getElementsByClassName(
       "limpiarInput"
