@@ -76,7 +76,7 @@ button {
     height: 1000vh;
     width: 1000vh;
     background: #fff;
-    pointer-events: none;
+    /* pointer-events: none; */
     background-color: rgba(0, 0, 0, 0.2);
     width: 1000px;
     height: 1000px;
@@ -137,4 +137,8 @@ button {
     text-transform: uppercase;
     font-size: x-large;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#inicioJuegoPantalla {
+    cursor: pointer;
 }

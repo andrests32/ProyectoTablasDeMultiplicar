@@ -12,5 +12,8 @@
   ],
   "author": "Andres Terraza <andresterraza.at@gmail.com>",
   "license": "MIT",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "sweetalert": "^2.1.2"
+  }
 }

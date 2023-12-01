@@ -17,53 +17,31 @@ saludarNombre.addEventListener("click", () => {
 
 ingresoNombreID.addEventListener("click", function () {
   // event.preventDefault();
- 
-  let input = document.getElementById("nombreIngreso").value;
-  localStorage.setItem("input", input);
-  document.getElementById("mostarNombre").innerHTML = input;
 
   function siNoIngresoNombre() {
-    let inputLleno = input
-    console.log(inputLleno);
+    let input = document.getElementById("nombreIngreso").value;
+    localStorage.setItem("input", input);
+    document.getElementById("mostarNombre").innerHTML = input;
 
-    let inputVacio = (document.getElementsByClassName(
-      "limpiarInput"
-    )[0].value = "");
+    // let inputLleno = input
+    // console.log(inputLleno);
 
-  const validacion = () => {
-    return new Promise((inputLleno, inputVacio) => {
-      if (true) {
-        inputLleno("Si se ejecuto la promesa correctamente");
-        saludarNombre.style.display = "flex";
-      } else {
-        inputVacio("No se ingreso ningun nombre");
-        alert("Debe ingresar un nombre");
-      }
-    });
-  };
-  
-  validacion()
-  .then((inputLleno) => (inputLleno))
-  .catch((inputVacio) => (inputVacio))
-  
+    let inputVacio = (document.getElementsByClassName("limpiarInput")[0].value =
+      "");
+    console.log(inputVacio);
 
-      
+    if (input === input) {
+      saludarNombre.style.display = "flex";
+    } else if (inputVacio == inputVacio) {
+      alert("Debes ingresar un nombre Primero.");
+      // return (saludarNombre.style.display = "flex")
 
-      
-      // if (inputLleno == inputLleno) {
-      //   console.log("Esta validando el input lleno");
-        // saludarNombre.style.display = "flex";
-      //   // alert("Debes ingresar un nombre Primero.")
-      //   // location.reload();
-      // } else {
-      //   // return (saludarNombre.style.display = "flex")
-      //   return;
-      // }
-
+      console.log("Esta validando el input vacio");
+      location.reload();
+    }
   }
 
   siNoIngresoNombre();
-
 
   nombreId.style.display = "none";
   ingresoNombre();
@@ -78,7 +56,15 @@ function ventanas() {
   closeMensaje.addEventListener("click", () => {
     modal_container.classList.remove("show");
     containerId.style.display = "flex";
+  });
+
+  inicioJuegoPantalla.addEventListener("click", async () => {
     empezar.style.display = "none";
+    containerId.style.display = "none";
+    let importacionModulos = await import("./modulo-logica.js");
+    importacionModulos.tablaDel2();
+
+    console.log(importacionModulos);
   });
 }
 
@@ -91,8 +77,3 @@ function iniciarJuego() {
 function ingresoNombre() {
   ingresoNombreID.style.display = "none";
 }
-
-inicioJuegoPantalla.addEventListener("click", async function () {
-  const importacionModulos = await import("./modulo-logica.js");
-  importacionModulos.tablaDel2();
-});
